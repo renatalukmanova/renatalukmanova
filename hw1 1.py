@@ -19,6 +19,7 @@ I = np.zeros(n+1)
 I[0] = math.log(1+a) - math.log(a)
 for i in range(n):
     I[i + 1] = 1 / (i + 1) - a * I[i]
+    I[n + 1 - i]= 1/a/(n + 1 -i)- I[n - i +2]/a
 plt.plot(I)
 print(I)
 
